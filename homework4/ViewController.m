@@ -15,13 +15,26 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+
+
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UIViewController *vc = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    vc.view.backgroundColor = [UIColor blueColor];
+    vc.title = @"detail VC";
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 @end
